@@ -1,0 +1,22 @@
+﻿@model RegisterViewModel
+
+<form asp-action="Register" asp-controller="Auth" method="post">
+    <input type="hidden" asp-for="@Model.ReturnUrl" />
+    <div class="form mb-1">
+        <span asp-validation-for="FirstName"></span>
+        <input class="form-control" asp-for="@Model.FirstName" placeholder="Имя" />
+    </div>
+    <div class="form mb-1">
+        <span asp-validation-for="LastName"></span>
+        <input class="form-control" asp-for="@Model.LastName" placeholder="Фамилия" />
+    </div>
+    <div class="form mb-1">
+        <span asp-validation-for="Email"></span>
+        <input class="form-control" asp-for="@Model.Email" placeholder="Email" />
+    </div>
+    <div class="form mb-1">
+        <span asp-validation-for="Password"></span>
+        <input class="form-control" asp-for="@Model.Password" placeholder="Password" />
+    </div>
+    <button class="btn btn-primary" type="submit">Registration</button>
+</form>
